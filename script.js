@@ -25,8 +25,5 @@ function showLibrary() {
   myLibrary.forEach(book => console.log(book.info));
 }
 
-showAddDialogBtn.addEventListener('click', () => {
-  addBookDialog.showModal();
-});
-
+showAddDialogBtn.addEventListener('click', () => addBookDialog.showModal());
 closeDialogBtn.addEventListener('click', () => addBookDialog.close());

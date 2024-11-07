@@ -2,6 +2,7 @@ const booksElement = document.querySelector('.books');
 const addBookDialog = document.getElementById('add-book-dialog');
 const showAddDialogBtn = document.getElementById('show-add-dialog');
 const addBookDialogBtn = document.getElementById('add-book-btn');
+const closeDialogBtn = document.getElementById('close-dialog-btn');
 
 const myLibrary = [];
 

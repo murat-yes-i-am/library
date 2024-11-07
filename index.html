@@ -8,6 +8,24 @@
 </head>
 <body>
   <button>Add new book</button>
+  <dialog id="add-book">
+    <form>
+      <label for="title"></label>
+      <input type="text" id="title" required>
+      
+      <label for="author"></label>
+      <input type="text" id="author" required>
+
+      <label for="pages"></label>
+      <input type="tel" id="pages" required>
+
+      <label for="isRead"></label>
+      <input type="checkbox" id="isRead">
+
+      <button>Add</button>
+    </form>
+  </dialog>
+
   <div class="books"></div>
   <script src="script.js"></script>
 </body>

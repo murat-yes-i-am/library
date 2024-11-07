@@ -1,4 +1,5 @@
 const booksElement = document.querySelector('.books');
+const addBookDialog = document.getElementById('add-book');
 
 const myLibrary = [];
 

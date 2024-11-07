@@ -22,3 +22,7 @@ function addBookToLibrary(book) {
 function showLibrary() {
   myLibrary.forEach(book => console.log(book.info));
 }
+
+addBookButton.addEventListener('click', () => {
+  addBookDialog.showModal();
+});

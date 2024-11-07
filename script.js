@@ -1,3 +1,5 @@
+const booksElement = document.querySelector('.books');
+
 const myLibrary = [];
 
 function Book(title, author, pages, isRead) {

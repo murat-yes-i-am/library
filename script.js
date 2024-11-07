@@ -1,6 +1,6 @@
 const booksElement = document.querySelector('.books');
 const addBookDialog = document.getElementById('add-book');
-const showAddBookBtn = document.getElementById('show-add-dialog');
+const showAddDialogBtn = document.getElementById('show-add-dialog');
 
 const myLibrary = [];
 
@@ -23,6 +23,6 @@ function showLibrary() {
   myLibrary.forEach(book => console.log(book.info));
 }
 
-showAddBookBtn.addEventListener('click', () => {
+showAddDialogBtn.addEventListener('click', () => {
   addBookDialog.showModal();
 });

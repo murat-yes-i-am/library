@@ -28,3 +28,5 @@ function showLibrary() {
 showAddDialogBtn.addEventListener('click', () => {
   addBookDialog.showModal();
 });
+
+closeDialogBtn.addEventListener('click', () => addBookDialog.close());

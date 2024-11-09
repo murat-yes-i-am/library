@@ -45,6 +45,7 @@ function showBook(book) {
   const {id, title, author, pages, isRead} = book;
 
   const bookElement = document.createElement('div');
+  bookElement.id = id;
   bookElement.classList.add('book');
 
   const titleElement = document.createElement('p');

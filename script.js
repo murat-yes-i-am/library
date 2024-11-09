@@ -4,7 +4,20 @@ const showAddDialogBtn = document.getElementById('show-add-dialog');
 const addBookDialogBtn = document.getElementById('add-book-btn');
 const closeDialogBtn = document.getElementById('close-dialog-btn');
 
-const myLibrary = [];
+const myLibrary = [
+  {
+    title: '1984',
+    author: 'George Orwel',
+    pages: 328,
+    isRead: true,
+  },
+  {
+    title: 'The Lord of the Rings',
+    author: '	J. R. R. Tolkien',
+    pages: 1077,
+    isRead: false,
+  },
+];
 
 function Book(title, author, pages, isRead) {
   this.title = title;

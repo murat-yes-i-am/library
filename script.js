@@ -6,23 +6,27 @@ const closeDialogBtn = document.getElementById('close-dialog-btn');
 
 const myLibrary = [
   {
-    id: 'nfkdjsnfsanfkans',
+    id: uniqueID(),
     title: '1984',
     author: 'George Orwel',
     pages: 328,
     isRead: true,
   },
   {
-    id: 'mcldmnvklacxdsv',
+    id: uniqueID(),
     title: 'The Lord of the Rings',
-    author: '	J. R. R. Tolkien',
+    author: 'J. R. R. Tolkien',
     pages: 1077,
     isRead: false,
   },
 ];
 
-function Book(id, title, author, pages, isRead) {
-  this.id = id;
+function uniqueID() {
+  return Date.now().toString(36) + Math.random().toString(36).slice(2);
+}
+
+function Book(title, author, pages, isRead) {
+  this.id = uniqueID();
   this.title = title;
   this.author = author;
   this.pages = pages;

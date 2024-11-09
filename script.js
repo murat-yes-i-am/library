@@ -1,12 +1,13 @@
 const booksElement = document.querySelector('.books');
 const addBookDialog = document.getElementById('add-book-dialog');
 const showAddDialogBtn = document.getElementById('show-add-dialog');
+const addBookForm = document.getElementById('add-book-form');
 
 const titleInput = document.getElementById('title');
 const authorInput = document.getElementById('author');
 const pagesInput = document.getElementById('pages');
 const isReadCheckbox = document.getElementById('isRead');
-const addBookDialogBtn = document.getElementById('add-book-btn');
+const addBookBtn = document.getElementById('add-book-btn');
 const closeDialogBtn = document.getElementById('close-dialog-btn');
 
 const myLibrary = [
@@ -47,7 +48,7 @@ function addBookToLibrary(book) {
 }
 
 function showBook(book) {
-  const {id, title, author, pages, isRead} = book;
+  const { id, title, author, pages, isRead } = book;
 
   const bookElement = document.createElement('div');
   bookElement.id = id;
@@ -86,6 +87,21 @@ function showLibrary() {
   myLibrary.forEach(book => showBook(book));
 }
 
-showLibrary();
+function handleSubmit(event) {
+  event.preventDefault();
+  const form = event.target;
+  const formData = new FormData(form);
+
+  const [title, author, pages, isRead = false] = formData.values();
+  const book = new Book(title, author, pages, isRead);
+  addBookToLibrary(book);
+  showBook(book);
+
+  addBookDialog.close();
+}
+
 showAddDialogBtn.addEventListener('click', () => addBookDialog.showModal());
+addBookDialog.addEventListener('submit', handleSubmit);
 closeDialogBtn.addEventListener('click', () => addBookDialog.close());
+
+showLibrary();

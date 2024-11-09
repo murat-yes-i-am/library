@@ -59,12 +59,13 @@ function showBook(book) {
   pagesElement.classList.add('book-pages');
   pagesElement.textContent = `number of pages: ${pages}`;
 
+  const checkboxId = `book#${id}-checkbox`
   const isReadLabel = document.createElement('label');
-  isReadLabel.setAttribute('for', `book${id}-checkbox`);
+  isReadLabel.setAttribute('for', checkboxId);
   isReadLabel.textContent = 'Is read: '
 
   const isReadCheckBox = document.createElement('input');
-  isReadCheckBox.id = `book${id}-checkbox`;
+  isReadCheckBox.id = checkboxId;
   isReadCheckBox.setAttribute('type', 'checkbox');
 
   if (isRead) {

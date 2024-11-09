@@ -79,7 +79,16 @@ function showBook(book) {
     isReadCheckBox.setAttribute('checked', isRead);
   }
 
-  bookElement.append(titleElement, authorElement, pagesElement, isReadLabel, isReadCheckBox);
+  const removeButton = document.createElement('button');
+  removeButton.textContent = 'Remove';
+  removeButton.setAttribute('type', 'button');
+  removeButton.addEventListener('click', () => {
+    bookElement.remove();
+    const index = myLibrary.findIndex(book => book.id = id);
+    myLibrary.splice(index, 1);
+  });
+
+  bookElement.append(titleElement, authorElement, pagesElement, isReadLabel, isReadCheckBox, removeButton);
   booksElement.append(bookElement);
 }
 

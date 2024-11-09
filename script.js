@@ -87,7 +87,7 @@ function showLibrary() {
   myLibrary.forEach(book => showBook(book));
 }
 
-function handleSubmit(event) {
+function handleAddBookSubmit(event) {
   event.preventDefault();
   const form = event.target;
   const formData = new FormData(form);
@@ -101,7 +101,7 @@ function handleSubmit(event) {
 }
 
 showAddDialogBtn.addEventListener('click', () => addBookDialog.showModal());
-addBookDialog.addEventListener('submit', handleSubmit);
+addBookDialog.addEventListener('submit', handleAddBookSubmit);
 closeDialogBtn.addEventListener('click', () => addBookDialog.close());
 
 showLibrary();

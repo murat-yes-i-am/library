@@ -74,13 +74,13 @@ function showBook(book) {
   const isReadCheckBox = document.createElement('input');
   isReadCheckBox.id = checkboxId;
   isReadCheckBox.setAttribute('type', 'checkbox');
-
-  if (isRead) {
-    isReadCheckBox.setAttribute('checked', isRead);
-  }
+  isReadCheckBox.checked = isRead;
+  isReadCheckBox.addEventListener('click', (e) => {
+    book.isRead = isReadCheckBox.checked;
+  });
 
   const removeButton = document.createElement('button');
-  removeButton.textContent = 'Remove';
+  removeButton.textContent = 'Remove the book';
   removeButton.setAttribute('type', 'button');
   removeButton.addEventListener('click', () => {
     bookElement.remove();

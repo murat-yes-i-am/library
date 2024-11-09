@@ -1,6 +1,11 @@
 const booksElement = document.querySelector('.books');
 const addBookDialog = document.getElementById('add-book-dialog');
 const showAddDialogBtn = document.getElementById('show-add-dialog');
+
+const titleInput = document.getElementById('title');
+const authorInput = document.getElementById('author');
+const pagesInput = document.getElementById('pages');
+const isReadCheckbox = document.getElementById('isRead');
 const addBookDialogBtn = document.getElementById('add-book-btn');
 const closeDialogBtn = document.getElementById('close-dialog-btn');
 

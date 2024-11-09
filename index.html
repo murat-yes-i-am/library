@@ -11,18 +11,18 @@
 
   <button type="button" id="show-add-dialog">Add new book</button>
   <dialog id="add-book-dialog">
-    <form method="dialog">
+    <form method="dialog" id="add-book-form">
       <label for="title">Enter title</label>
-      <input type="text" id="title" required autofocus>
+      <input type="text" id="title" name="title" required autofocus>
       
       <label for="author">Enter author</label>
-      <input type="text" id="author" required>
+      <input type="text" id="author" name="author" required>
 
       <label for="pages">Enter number of pages</label>
-      <input type="tel" id="pages" required>
+      <input type="tel" id="pages" name="pages" required>
 
       <label for="isRead">Check if the book is read</label>
-      <input type="checkbox" id="isRead">
+      <input type="checkbox" id="isRead" name="isRead">
 
       <button id="add-book-btn">Add</button>
       <button type="button" id="close-dialog-btn">Close</button>

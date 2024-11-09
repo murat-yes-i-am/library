@@ -44,12 +44,15 @@ function showBook(book) {
   bookElement.classList.add('book');
 
   const titleElement = document.createElement('p');
+  titleElement.classList.add('book-title');
   titleElement.textContent = title;
 
   const authorElement = document.createElement('p');
+  authorElement.classList.add('book-author');
   authorElement.textContent = `by ${author}`;
 
   const pagesElement = document.createElement('p');
+  pagesElement.classList.add('book-pages');
   pagesElement.textContent = `number of pages: ${pages}`;
 
   const isReadLabel = document.createElement('label');

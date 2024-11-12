@@ -47,6 +47,14 @@ function addBookToLibrary(book) {
   myLibrary.push(book);
 }
 
+function removeBookFromLibrary(bookId) {
+  const index = myLibrary.findIndex(book => book.id = bookId);
+
+  if (index !== -1) {
+    myLibrary.splice(index, 1);
+  }
+}
+
 function createTitleElement(title) {
   const titleElement = document.createElement('p');
   titleElement.classList.add('book-title');
@@ -119,8 +127,7 @@ function showBook(book) {
 
   removeButton.addEventListener('click', () => {
     bookElement.remove();
-    const index = myLibrary.findIndex(book => book.id = id);
-    myLibrary.splice(index, 1);
+    removeBookFromLibrary(id)
   });
 
   bookElement.append(titleElement, authorElement, pagesElement, isReadLabel, isReadCheckBox, removeButton);

@@ -1,4 +1,4 @@
-const booksElement = document.querySelector('.books');
+const booksContainer = document.querySelector('.books');
 const addBookDialog = document.getElementById('add-book-dialog');
 const showAddDialogBtn = document.getElementById('show-add-dialog');
 const addBookForm = document.getElementById('add-book-form');
@@ -124,7 +124,7 @@ function showBook(book) {
   });
 
   bookElement.append(titleElement, authorElement, pagesElement, isReadLabel, isReadCheckBox, removeButton);
-  booksElement.append(bookElement);
+  booksContainer.append(bookElement);
 }
 
 function showLibrary() {

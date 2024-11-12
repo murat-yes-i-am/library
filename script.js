@@ -83,7 +83,7 @@ function createIsReadLabel(bookId) {
   const checkboxId = `book#${bookId}-checkbox`;
   const isReadLabel = document.createElement('label');
   isReadLabel.setAttribute('for', checkboxId);
-  isReadLabel.textContent = 'Is read: ';
+  isReadLabel.textContent = 'Is read before: ';
 
   return isReadLabel;
 }

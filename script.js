@@ -63,6 +63,14 @@ function createAuthorElement(author) {
   return authorElement;
 }
 
+function createPagesElement(pages) {
+  const pagesElement = document.createElement('p');
+  pagesElement.classList.add('book-pages');
+  pagesElement.textContent = `number of pages: ${pages}`;
+
+  return pagesElement;
+}
+
 function createIsReadLabel(bookId) {
   const checkboxId = `book#${bookId}-checkbox`;
   const isReadLabel = document.createElement('label');
@@ -72,12 +80,14 @@ function createIsReadLabel(bookId) {
   return isReadLabel;
 }
 
-function createPagesElement(pages) {
-  const pagesElement = document.createElement('p');
-  pagesElement.classList.add('book-pages');
-  pagesElement.textContent = `number of pages: ${pages}`;
+function createIsReadCheckbox(bookId, isRead) {
+  const checkboxId = `book#${bookId}-checkbox`;
+  const isReadCheckBox = document.createElement('input');
+  isReadCheckBox.id = checkboxId;
+  isReadCheckBox.setAttribute('type', 'checkbox');
+  isReadCheckBox.checked = isRead;
 
-  return pagesElement;
+  return isReadCheckBox;
 }
 
 function showBook(book) {
@@ -91,11 +101,8 @@ function showBook(book) {
   const authorElement = createAuthorElement(author);
   const pagesElement = createPagesElement(pages);
   const isReadLabel = createIsReadLabel(id);
+  const isReadCheckBox = createIsReadCheckbox(id, isRead);
 
-  const isReadCheckBox = document.createElement('input');
-  isReadCheckBox.id = checkboxId;
-  isReadCheckBox.setAttribute('type', 'checkbox');
-  isReadCheckBox.checked = isRead;
   isReadCheckBox.addEventListener('click', (e) => {
     book.isRead = isReadCheckBox.checked;
   });

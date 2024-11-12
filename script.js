@@ -25,6 +25,20 @@ const myLibrary = [
     pages: 1077,
     isRead: false,
   },
+  {
+    id: uniqueID(),
+    title: 'How to Win at Chess',
+    author: 'Levy Rozman',
+    pages: 300,
+    isRead: false,
+  },
+  {
+    id: uniqueID(),
+    title: 'Tuesdays with Murray',
+    author: 'D. L. Moody',
+    pages: 200,
+    isRead: false,
+  },
 ];
 
 function uniqueID() {

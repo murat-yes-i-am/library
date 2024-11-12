@@ -55,6 +55,14 @@ function createTitleElement(title) {
   return titleElement;
 }
 
+function createAuthorElement(author) {
+  const authorElement = document.createElement('p');
+  authorElement.classList.add('book-author');
+  authorElement.textContent = `by ${author}`;
+
+  return authorElement;
+}
+
 function showBook(book) {
   const { id, title, author, pages, isRead } = book;
 
@@ -63,10 +71,7 @@ function showBook(book) {
   bookElement.classList.add('book');
 
   const titleElement = createTitleElement(title);
-
-  const authorElement = document.createElement('p');
-  authorElement.classList.add('book-author');
-  authorElement.textContent = `by ${author}`;
+  const authorElement = createAuthorElement(author);
 
   const pagesElement = document.createElement('p');
   pagesElement.classList.add('book-pages');

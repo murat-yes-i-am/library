@@ -111,11 +111,12 @@ function showBook(book) {
   const isReadLabel = createIsReadLabel(id);
   const isReadCheckBox = createIsReadCheckbox(id, isRead);
 
-  isReadCheckBox.addEventListener('click', (e) => {
+  isReadCheckBox.addEventListener('click', () => {
     book.isRead = isReadCheckBox.checked;
   });
 
   const removeButton = createRemoveBookBtn();
+
   removeButton.addEventListener('click', () => {
     bookElement.remove();
     const index = myLibrary.findIndex(book => book.id = id);

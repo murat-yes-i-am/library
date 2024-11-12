@@ -47,6 +47,14 @@ function addBookToLibrary(book) {
   myLibrary.push(book);
 }
 
+function createTitleElement(title) {
+  const titleElement = document.createElement('p');
+  titleElement.classList.add('book-title');
+  titleElement.textContent = title;
+
+  return titleElement;
+}
+
 function showBook(book) {
   const { id, title, author, pages, isRead } = book;
 
@@ -54,9 +62,7 @@ function showBook(book) {
   bookElement.id = id;
   bookElement.classList.add('book');
 
-  const titleElement = document.createElement('p');
-  titleElement.classList.add('book-title');
-  titleElement.textContent = title;
+  const titleElement = createTitleElement(title);
 
   const authorElement = document.createElement('p');
   authorElement.classList.add('book-author');

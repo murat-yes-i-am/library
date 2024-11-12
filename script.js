@@ -63,6 +63,14 @@ function createAuthorElement(author) {
   return authorElement;
 }
 
+function createPagesElement(pages) {
+  const pagesElement = document.createElement('p');
+  pagesElement.classList.add('book-pages');
+  pagesElement.textContent = `number of pages: ${pages}`;
+
+  return pagesElement;
+}
+
 function showBook(book) {
   const { id, title, author, pages, isRead } = book;
 
@@ -72,10 +80,7 @@ function showBook(book) {
 
   const titleElement = createTitleElement(title);
   const authorElement = createAuthorElement(author);
-
-  const pagesElement = document.createElement('p');
-  pagesElement.classList.add('book-pages');
-  pagesElement.textContent = `number of pages: ${pages}`;
+  const pagesElement = createPagesElement(pages)
 
   const checkboxId = `book#${id}-checkbox`
   const isReadLabel = document.createElement('label');

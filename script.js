@@ -97,7 +97,7 @@ function createIsReadLabel(bookId) {
   const checkboxId = `book#${bookId}-checkbox`;
   const isReadLabel = document.createElement('label');
   isReadLabel.setAttribute('for', checkboxId);
-  isReadLabel.textContent = 'Is read before: ';
+  isReadLabel.textContent = ' Is read before';
 
   return isReadLabel;
 }
@@ -145,7 +145,7 @@ function showBook(book) {
     removeBookFromLibrary(id);
   });
 
-  bookElement.append(titleElement, authorElement, pagesElement, isReadLabel, isReadCheckBox, removeButton);
+  bookElement.append(titleElement, authorElement, pagesElement, isReadCheckBox, isReadLabel, removeButton);
   booksContainer.append(bookElement);
 }
 

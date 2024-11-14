@@ -116,6 +116,7 @@ function createRemoveBookBtn() {
   const removeButton = document.createElement('button');
   removeButton.textContent = 'Remove the book';
   removeButton.setAttribute('type', 'button');
+  removeButton.classList.add('remove-book-btn');
 
   return removeButton;
 }
@@ -141,7 +142,7 @@ function showBook(book) {
 
   removeButton.addEventListener('click', () => {
     bookElement.remove();
-    removeBookFromLibrary(id)
+    removeBookFromLibrary(id);
   });
 
   bookElement.append(titleElement, authorElement, pagesElement, isReadLabel, isReadCheckBox, removeButton);

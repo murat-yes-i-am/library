@@ -28,3 +28,13 @@ body {
   border-left: 4px solid var(--book-hover-border-color);
   outline: 2px solid var(--book-hover-border-color);
 }
+
+.remove-book-btn {
+  cursor: pointer;
+  border: none;
+  background-color: white;
+}
+
+.remove-book-btn:hover {
+  border: 2px solid var(--background-color);
+}

@@ -114,7 +114,7 @@ function createIsReadCheckbox(bookId, isRead) {
 
 function createRemoveBookBtn() {
   const removeButton = document.createElement('button');
-  removeButton.textContent = 'Remove the book';
+  removeButton.textContent = 'X';
   removeButton.setAttribute('type', 'button');
   removeButton.classList.add('remove-book-btn');
 

@@ -1,4 +1,30 @@
+:root {
+  --background-color: #DDD;
+  --book-border-color: rgb(58, 131, 56);
+  --book-hover-border-color: orange;
+  --shadow-color: #BBB;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
 .books {
+  padding: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.book {
+  padding: 1rem;
+  background-color: white;
+  border-left: 4px solid var(--book-border-color);
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px 1px var(--shadow-color);
+}
+
+.book:hover {
+  border-left: 4px solid var(--book-hover-border-color);
+  outline: 2px solid var(--book-hover-border-color);
 }

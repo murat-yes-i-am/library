@@ -53,10 +53,6 @@ function Book(title, author, pages, isRead) {
   this.isRead = isRead;
 }
 
-Book.prototype.info = function () {
-  return `${this.title} by ${this.author}, ${this.pages} pages, ${this.isRead ? 'is read' : 'is not read yet'}`;
-}
-
 function addBookToLibrary(book) {
   myLibrary.push(book);
 }

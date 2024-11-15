@@ -9,6 +9,12 @@ body {
   background-color: var(--background-color);
 }
 
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
 .books {
   padding: 1rem;
   display: grid;

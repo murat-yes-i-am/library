@@ -20,20 +20,95 @@ h1 {
   font-weight: 700;
 }
 
+label {
+  font-weight: 500;
+}
+
+input {
+  padding: 0.5rem 1rem;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+}
+
 button {
   cursor: pointer;
   border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
 }
 
 button#show-add-dialog {
   margin-left: 1rem;
-  padding: 0.5rem 1rem;
   border: 2px solid var(--book-border-color);
   background-color: white;
 }
 
 button#show-add-dialog:hover {
   border: 2px solid var(--book-hover-border-color);
+}
+
+#add-book-dialog {
+  font-size: 1.25rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+#add-book-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "title-label title-label"
+                       "title-input title-input"
+                       "author-label author-label"
+                       "author-input author-input"
+                       "pages-label pages-label"
+                       "pages-input pages-input"
+                       "isRead-label isRead-checkbox"
+                       "add cancel";
+  gap: 1rem;
+}
+
+label[for="title"] {
+  grid-area: title-label;
+}
+
+#title {
+  grid-area: title-input;
+}
+
+label[for="author"] {
+  grid-area: author-label;
+}
+
+#author {
+  grid-area: author-input;
+}
+
+label[for="pages"] {
+  grid-area: pages-label;
+}
+
+#pages {
+  grid-area: pages-input;
+}
+
+label[for="isRead"] {
+  grid-area: isRead-label;
+}
+
+#isRead {
+  width: min(1.5rem, 32px);
+  height: min(1.5rem, 32px);
+  grid-area: isRead-checkbox;
+  justify-self: start;
+}
+
+#add-book-btn {
+  grid-area: add;
+}
+
+#close-dialog-btn {
+  grid-area: cancel;
 }
 
 .books {
@@ -96,7 +171,6 @@ button#show-add-dialog:hover {
 }
 
 .remove-book-btn {
-  cursor: pointer;
   border: none;
   background-color: white;
   position: absolute;

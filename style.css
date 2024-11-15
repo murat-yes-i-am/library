@@ -91,6 +91,8 @@ button#show-add-dialog:hover {
 .book-read-checkbox {
   grid-area: checkbox;
   justify-self: end;
+  height: 24px;
+  width: 24px;
 }
 
 .remove-book-btn {

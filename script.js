@@ -88,7 +88,7 @@ function createAuthorElement(author) {
 function createPagesElement(pages) {
   const pagesElement = document.createElement('p');
   pagesElement.classList.add('book-pages');
-  pagesElement.textContent = `number of pages: ${pages}`;
+  pagesElement.textContent = `Number of Pages: ${pages}`;
 
   return pagesElement;
 }

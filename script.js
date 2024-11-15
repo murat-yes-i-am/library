@@ -69,6 +69,10 @@ function removeBookFromLibrary(bookId) {
   }
 }
 
+function getBookCheckboxId (bookId) {
+  return `book#${bookId}-checkbox`;
+}
+
 function createTitleElement(title) {
   const titleElement = document.createElement('p');
   titleElement.classList.add('book-title');
@@ -94,8 +98,9 @@ function createPagesElement(pages) {
 }
 
 function createIsReadLabel(bookId) {
-  const checkboxId = `book#${bookId}-checkbox`;
+  const checkboxId = getBookCheckboxId(bookId);
   const isReadLabel = document.createElement('label');
+  isReadLabel.classList.add('book-read-label');
   isReadLabel.setAttribute('for', checkboxId);
   isReadLabel.textContent = ' Is read before';
 
@@ -103,8 +108,9 @@ function createIsReadLabel(bookId) {
 }
 
 function createIsReadCheckbox(bookId, isRead) {
-  const checkboxId = `book#${bookId}-checkbox`;
+  const checkboxId = getBookCheckboxId(bookId);
   const isReadCheckBox = document.createElement('input');
+  isReadCheckBox.classList.add('book-read-checkbox');
   isReadCheckBox.id = checkboxId;
   isReadCheckBox.setAttribute('type', 'checkbox');
   isReadCheckBox.checked = isRead;

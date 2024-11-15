@@ -9,31 +9,88 @@ body {
   background-color: var(--background-color);
 }
 
+header {
+  background-color: #fbfbfb;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
 h1 {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 1em;
+}
+
+button {
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+button#show-add-dialog {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--book-border-color);
+  background-color: white;
+}
+
+button#show-add-dialog:hover {
+  border: 2px solid var(--book-hover-border-color);
 }
 
 .books {
   padding: 1rem;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
 }
 
 .book {
+  min-height: 250px;
   padding: 1rem;
   background-color: white;
   border-left: 4px solid var(--book-border-color);
   border-radius: 4px;
   box-shadow: 2px 2px 4px 1px var(--shadow-color);
   position: relative;
+  display: grid;
+  grid-template-areas: "title title"
+                       "author author"
+                       "pages pages"
+                       "checkbox label";
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  gap: 0 1rem;
 }
 
 .book:hover {
   border-left: 4px solid var(--book-hover-border-color);
   outline: 2px solid var(--book-hover-border-color);
+}
+
+.book-title {
+  font-size: 1.375rem;
+  font-weight: 600;
+  grid-area: title;
+  margin-top: 1rem;
+}
+
+.book-author {
+  font-size: 1.25rem;
+  grid-area: author;
+}
+
+.book-pages {
+  grid-area: pages;
+}
+
+.book-read-label {
+  grid-area: label;
+  justify-self: start;
+}
+
+.book-read-checkbox {
+  grid-area: checkbox;
+  justify-self: end;
 }
 
 .remove-book-btn {
